@@ -1,3 +1,5 @@
+using System.Runtime;
+using System.Threading;
 using Jypeli;
 
 namespace PongPeli;
@@ -9,27 +11,55 @@ namespace PongPeli;
 /// </summary>
 public class PongPeli : PhysicsGame
 {
-    private readonly Vector nopeusYlos = new Vector(0, 200);
-    private readonly Vector nopeusAlas = new Vector(0, -200);
-
+    private readonly Vector nopeusYlos = new Vector(0, 400);
+    private readonly Vector nopeusAlas = new Vector(0, -400);
+    private PhysicsObject pallo;
+    private PhysicsObject maila1;
     public override void Begin()
     {
-        PhysicsObject pallo = LuoPallo(this, -200, 0);
-        PhysicsObject maila1 = LuoMaila(this,Level.Left + 20.0, 0.0);
+        pallo = LuoPallo(this, -200, 0.0);
+        maila1 = LuoMaila(this,Level.Left + 20.0, 0.0);
         PhysicsObject maila2 = LuoMaila(this,Level.Right - 20.0, 0.0);
 
-
-        LuoKentta();
+        LuoKenttaJaAsetaTormaykset(pallo);
         AsetaOhjaimet(maila1, maila2);
         AloitaPeli(pallo);
     }
 
-    private void LuoKentta()
+    protected override void Update(Time time)
+    {
+        maila1.Position = pallo.Position;
+    }
+
+    private void LuoKenttaJaAsetaTormaykset(PhysicsObject pallo)
     {
         Level.Background.Color = Color.Lime;
-        Level.CreateBorders(1.0, false);
-        IntMeter pelaajan1Pisteet = LuoPisteLaskuri(this, Screen.Left + 800.0, Screen.Top - 200.0);
-        IntMeter pelaajan2Pisteet = LuoPisteLaskuri(this, Screen.Right + 800.0, Screen.Top - 100.0);
+        
+        PhysicsObject vasenReuna = Level.CreateLeftBorder();
+        vasenReuna.KineticFriction = 0.0;
+        vasenReuna.Restitution = 1.0;
+        vasenReuna.IsVisible = false;
+
+        PhysicsObject oikeaReuna = Level.CreateRightBorder();
+        oikeaReuna.KineticFriction = 0.0;
+        oikeaReuna.Restitution = 1.0;
+        oikeaReuna.IsVisible = false;
+
+        PhysicsObject alaReuna = Level.CreateBottomBorder();
+        alaReuna.KineticFriction = 0.0;
+        alaReuna.Restitution = 1.0;
+        alaReuna.IsVisible = false;
+
+        PhysicsObject ylaReuna = Level.CreateTopBorder();
+        ylaReuna.KineticFriction = 0.0;
+        ylaReuna.Restitution = 1.0;
+        ylaReuna.IsVisible = false;
+
+        IntMeter pelaajan1Pisteet = LuoPisteLaskuri(this, Screen.Top - 100.0, Screen.Left + 100.0);
+        IntMeter pelaajan2Pisteet = LuoPisteLaskuri(this, Screen.Top -100.0, Screen.Right - 100.0);
+
+        AddCollisionHandler(pallo, oikeaReuna, (_, _) => pelaajan1Pisteet.Value += 1);
+        AddCollisionHandler(pallo, vasenReuna, (_, _) => pelaajan2Pisteet.Value += 1);
 
         Camera.ZoomToLevel();
     }
@@ -38,9 +68,9 @@ public class PongPeli : PhysicsGame
     {
         PhysicsObject pallo = new PhysicsObject(40.0, 40.0, Shape.Circle);
         pallo.Color = Color.Black;
-        pallo.X = -200.0;
-        pallo.Y = 0.0;
-        pallo.Restitution = 1.0;
+        pallo.X = x;
+        pallo.Y = y;
+        pallo.Restitution = 1.01;
         pallo.KineticFriction = 0.0;
         pallo.MomentOfInertia = double.PositiveInfinity;
         peli.Add(pallo);
@@ -110,7 +140,7 @@ public class PongPeli : PhysicsGame
 
     private static void AloitaPeli(PhysicsObject pallo)
     {
-        Vector impulssi = new Vector(500.0, 0.0);
+        Vector impulssi = new Vector(500.0, 200.0);
         pallo.Hit(impulssi * pallo.Mass);
     }
 }

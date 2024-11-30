@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PongPeli")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ffae0cdac363f25cca8c1b5c87d8daddc65ca909")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d0b0c86abf5299d77f602c471c0a93ec7a8765cf")]
 [assembly: System.Reflection.AssemblyProductAttribute("PongPeli")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PongPeli")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
