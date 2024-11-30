@@ -22,16 +22,15 @@ public class PongPeli : PhysicsGame
         LuoKentta();
         AsetaOhjaimet(maila1, maila2);
         AloitaPeli(pallo);
-        
-
-        Keyboard.Listen(Key.Escape, ButtonState.Pressed, ConfirmExit, "Lopeta peli");
     }
 
     private void LuoKentta()
     {
         Level.Background.Color = Color.Lime;
         Level.CreateBorders(1.0, false);
-        
+        IntMeter pelaajan1Pisteet = LuoPisteLaskuri(this, Screen.Left + 800.0, Screen.Top - 200.0);
+        IntMeter pelaajan2Pisteet = LuoPisteLaskuri(this, Screen.Right + 800.0, Screen.Top - 100.0);
+
         Camera.ZoomToLevel();
     }
 
@@ -59,6 +58,24 @@ public class PongPeli : PhysicsGame
         return maila;
     }
 
+    public static IntMeter LuoPisteLaskuri(PhysicsGame peli, double y, double x)
+    {
+        IntMeter laskuri = new IntMeter(0);
+        laskuri.MaxValue = 10;
+
+        Label naytto = new Label();
+        naytto.X = x;
+        naytto.Y = y;
+        naytto.TextColor = Color.Black;
+        naytto.BorderColor = peli.Level.BackgroundColor;
+        naytto.Color = peli.Level.BackgroundColor;
+
+        naytto.BindTo(laskuri);
+        peli.Add(naytto);
+
+        return laskuri;
+    }
+
     private void AsetaOhjaimet(PhysicsObject maila1, PhysicsObject maila2)
     {
         Keyboard.Listen(Key.W, ButtonState.Down, AsetaNopeus, "Pelaaja 1: Liiuta mailaa ylös", maila1, nopeusYlos);
@@ -75,8 +92,19 @@ public class PongPeli : PhysicsGame
         Keyboard.Listen(Key.F1, ButtonState.Pressed, ShowControlHelp, "Näytä ohjeet");
     }
 
-    public static void AsetaNopeus(PhysicsObject maila, Vector nopeus)
+    private void AsetaNopeus(PhysicsObject maila, Vector nopeus)
     {
+        if ((nopeus.Y < 0) && (maila.Bottom < Level.Bottom))
+        {
+            maila.Velocity = Vector.Zero;
+            return;
+        }
+        if ((nopeus.Y > 0) && (maila.Top > Level.Top))
+        {
+            maila.Velocity = Vector.Zero;
+            return;
+        }
+
         maila.Velocity = nopeus;
     }
 

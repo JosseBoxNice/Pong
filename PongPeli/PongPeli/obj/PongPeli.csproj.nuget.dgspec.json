@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gr301775\\source\\repos\\TobynJaJossenHulluCooking\\Emmäätiiä\\Pong\\PongPeli\\PongPeli\\PongPeli.csproj": {}
+    "c:\\Users\\gr301775\\source\\repos\\TobynJaJossenHulluCooking\\Emmäätiiä\\Pong\\PongPeli\\PongPeli\\PongPeli.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gr301775\\source\\repos\\TobynJaJossenHulluCooking\\Emmäätiiä\\Pong\\PongPeli\\PongPeli\\PongPeli.csproj": {
+    "c:\\Users\\gr301775\\source\\repos\\TobynJaJossenHulluCooking\\Emmäätiiä\\Pong\\PongPeli\\PongPeli\\PongPeli.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gr301775\\source\\repos\\TobynJaJossenHulluCooking\\Emmäätiiä\\Pong\\PongPeli\\PongPeli\\PongPeli.csproj",
+        "projectUniqueName": "c:\\Users\\gr301775\\source\\repos\\TobynJaJossenHulluCooking\\Emmäätiiä\\Pong\\PongPeli\\PongPeli\\PongPeli.csproj",
         "projectName": "PongPeli",
-        "projectPath": "C:\\Users\\gr301775\\source\\repos\\TobynJaJossenHulluCooking\\Emmäätiiä\\Pong\\PongPeli\\PongPeli\\PongPeli.csproj",
+        "projectPath": "c:\\Users\\gr301775\\source\\repos\\TobynJaJossenHulluCooking\\Emmäätiiä\\Pong\\PongPeli\\PongPeli\\PongPeli.csproj",
         "packagesPath": "C:\\Users\\gr301775\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gr301775\\source\\repos\\TobynJaJossenHulluCooking\\Emmäätiiä\\Pong\\PongPeli\\PongPeli\\obj\\",
+        "outputPath": "c:\\Users\\gr301775\\source\\repos\\TobynJaJossenHulluCooking\\Emmäätiiä\\Pong\\PongPeli\\PongPeli\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\gr301775\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\gr301775\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },

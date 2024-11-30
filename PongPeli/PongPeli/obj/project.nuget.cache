@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "34xRepJLWsw=",
+  "dgSpecHash": "EBz7xdIKTT0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\gr301775\\source\\repos\\TobynJaJossenHulluCooking\\Emmäätiiä\\Pong\\PongPeli\\PongPeli\\PongPeli.csproj",
+  "projectFilePath": "c:\\Users\\gr301775\\source\\repos\\TobynJaJossenHulluCooking\\Emmäätiiä\\Pong\\PongPeli\\PongPeli\\PongPeli.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gr301775\\.nuget\\packages\\cyotek.drawing.bitmapfont\\2.0.4\\cyotek.drawing.bitmapfont.2.0.4.nupkg.sha512",
     "C:\\Users\\gr301775\\.nuget\\packages\\fontstashsharp\\1.2.8\\fontstashsharp.1.2.8.nupkg.sha512",
