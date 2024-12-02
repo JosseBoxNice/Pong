@@ -13,22 +13,16 @@ public class PongPeli : PhysicsGame
 {
     private readonly Vector nopeusYlos = new Vector(0, 400);
     private readonly Vector nopeusAlas = new Vector(0, -400);
-    private PhysicsObject pallo;
-    private PhysicsObject maila1;
+    
     public override void Begin()
     {
-        pallo = LuoPallo(this, -200, 0.0);
-        maila1 = LuoMaila(this,Level.Left + 20.0, 0.0);
+        PhysicsObject pallo = LuoPallo(this, -200, 0.0);
+        PhysicsObject maila1 = LuoMaila(this,Level.Left + 20.0, 0.0);
         PhysicsObject maila2 = LuoMaila(this,Level.Right - 20.0, 0.0);
 
         LuoKenttaJaAsetaTormaykset(pallo);
         AsetaOhjaimet(maila1, maila2);
         AloitaPeli(pallo);
-    }
-
-    protected override void Update(Time time)
-    {
-        maila1.Position = pallo.Position;
     }
 
     private void LuoKenttaJaAsetaTormaykset(PhysicsObject pallo)
