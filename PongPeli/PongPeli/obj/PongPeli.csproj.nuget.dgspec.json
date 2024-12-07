@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\gr301775\\source\\repos\\TobynJaJossenHulluCooking\\Emmäätiiä\\Pong\\PongPeli\\PongPeli\\PongPeli.csproj": {}
+    "C:\\Users\\gr301775\\source\\repos\\TobynJaJossenHulluCooking\\Emmäätiiä\\Pong\\PongPeli\\PongPeli\\PongPeli.csproj": {}
   },
   "projects": {
-    "c:\\Users\\gr301775\\source\\repos\\TobynJaJossenHulluCooking\\Emmäätiiä\\Pong\\PongPeli\\PongPeli\\PongPeli.csproj": {
+    "C:\\Users\\gr301775\\source\\repos\\TobynJaJossenHulluCooking\\Emmäätiiä\\Pong\\PongPeli\\PongPeli\\PongPeli.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\gr301775\\source\\repos\\TobynJaJossenHulluCooking\\Emmäätiiä\\Pong\\PongPeli\\PongPeli\\PongPeli.csproj",
+        "projectUniqueName": "C:\\Users\\gr301775\\source\\repos\\TobynJaJossenHulluCooking\\Emmäätiiä\\Pong\\PongPeli\\PongPeli\\PongPeli.csproj",
         "projectName": "PongPeli",
-        "projectPath": "c:\\Users\\gr301775\\source\\repos\\TobynJaJossenHulluCooking\\Emmäätiiä\\Pong\\PongPeli\\PongPeli\\PongPeli.csproj",
+        "projectPath": "C:\\Users\\gr301775\\source\\repos\\TobynJaJossenHulluCooking\\Emmäätiiä\\Pong\\PongPeli\\PongPeli\\PongPeli.csproj",
         "packagesPath": "C:\\Users\\gr301775\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\gr301775\\source\\repos\\TobynJaJossenHulluCooking\\Emmäätiiä\\Pong\\PongPeli\\PongPeli\\obj\\",
+        "outputPath": "C:\\Users\\gr301775\\source\\repos\\TobynJaJossenHulluCooking\\Emmäätiiä\\Pong\\PongPeli\\PongPeli\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gr301775\\AppData\\Roaming\\NuGet\\NuGet.Config"
